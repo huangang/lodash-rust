@@ -1,0 +1,18 @@
+{
+  "name": "lodash-rust-darwin-arm64",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "lodash-rust.darwin-arm64.node",
+  "files": [
+    "lodash-rust.darwin-arm64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
