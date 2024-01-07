@@ -51,7 +51,7 @@ pub fn sum(nums: Vec<f64>) -> f64 {
 pub fn max(nums: Vec<f64>) -> Option<f64> {
   match nums.iter().max_by(|a, b| a.partial_cmp(b).unwrap()) {
     Some(&max_value) => Some(max_value),
-    None => None
+    None => None,
   }
 }
 
@@ -59,6 +59,17 @@ pub fn max(nums: Vec<f64>) -> Option<f64> {
 pub fn min(nums: Vec<f64>) -> Option<f64> {
   match nums.iter().min_by(|a, b| a.partial_cmp(b).unwrap()) {
     Some(&max_value) => Some(max_value),
-    None => None
+    None => None,
+  }
+}
+
+#[napi]
+pub fn mean(nums: Vec<f64>) -> Option<f64> {
+  let sum: f64 = nums.iter().sum();
+  let length = nums.len() as f64;
+  if length > 0.0 {
+    Some(sum / length)
+  } else {
+    None
   }
 }

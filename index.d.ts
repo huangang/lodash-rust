@@ -13,3 +13,7 @@ export function round(value: number, decimalPlaces: number): number
 export function sum(nums: Array<number>): number
 export function max(nums: Array<number>): number | null
 export function min(nums: Array<number>): number | null
+/**
+ * 平均数
+*/
+export function mean(nums: Array<number>): number | null
