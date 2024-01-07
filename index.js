@@ -281,9 +281,15 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { add, divide, ceil, floor } = nativeBinding
+const { add, subtract, multiply, divide, ceil, floor, round, sum, max, min } = nativeBinding
 
 module.exports.add = add
+module.exports.subtract = subtract
+module.exports.multiply = multiply
 module.exports.divide = divide
 module.exports.ceil = ceil
 module.exports.floor = floor
+module.exports.round = round
+module.exports.sum = sum
+module.exports.max = max
+module.exports.min = min
